@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pipeline-quest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pipeline-quest
+  template:
+    metadata:
+      labels:
+        app: pipeline-quest
+    spec:
+      containers:
+        - name: app
+          image: your-ecr-repo:latest
+          ports:
+            - containerPort: 80
