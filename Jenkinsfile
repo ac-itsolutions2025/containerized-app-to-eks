@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         AWS_REGION = 'us-east-2'
-        ECR_REPO   = 'eks-apps'
+        ECR_REPO   = '124355683348.dkr.ecr.us-east-2.amazonaws.com/eks-apps'
         IMAGE_TAG  = "${env.BUILD_NUMBER}"
         CLUSTER    = 'acit-eks-group-one'
         KUSTOMIZE_DIR = 'k8s/overlays/dev'
